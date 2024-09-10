@@ -1,6 +1,5 @@
-const numbers = [1, 5, 8, 3, 2, 6, 7, 4, 9];
+const numbers = [4, 3, 9, 8, 2, 6, 1, 7, 5];
 
-// Sort by selection
 for (let i = 0; i < numbers.length - 1; i++) {
   let minIndex = i;
   for (let j = i + 1; j < numbers.length; j++) {

@@ -8,7 +8,6 @@ function Binary_search(number) {
     let mid = Math.floor((low + high) / 2);
 
     if (number == numbers[mid]) {
-      console.log(mid);
       return mid;
     } else if (number > numbers[mid]) {
       low = mid + 1;
@@ -17,8 +16,7 @@ function Binary_search(number) {
     }
   }
 
-  console.log("not found !");
   return "not found !";
 }
 
-Binary_search(50);
+console.log(Binary_search(14));

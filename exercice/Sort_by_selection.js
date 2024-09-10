@@ -1,14 +1,18 @@
+function selection_sort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+    }
+    let temp = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temp;
+    return arr;
+  }
+}
+
 const numbers = [4, 3, 9, 8, 2, 6, 1, 7, 5];
 
-for (let i = 0; i < numbers.length - 1; i++) {
-  let minIndex = i;
-  for (let j = i + 1; j < numbers.length; j++) {
-    if (numbers[j] < numbers[minIndex]) {
-      minIndex = j;
-    }
-  }
-  let temp = numbers[i];
-  numbers[i] = numbers[minIndex];
-  numbers[minIndex] = temp;
-  console.log(numbers);
-}
+console.log(selection_sort(numbers));
